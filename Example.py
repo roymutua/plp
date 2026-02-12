@@ -1,13 +1,11 @@
-userSet1 = int(input("Enter the number of first set "))
+numbers = []
 
-for i in range(userSet1):
-    number = int(input("Enter the set of integers "))
+userInput = int(input("How many values are you entering "))
 
-userSet2 = int(input("Enter the number of second set "))
-for i in range(userSet2):
-    number = int(input("Enter the set of integers "))
+for i in range(userInput):
+    value = int(input("Enter the value "))
+    numbers.append(value)
 
-common = userSet1 & userSet2
+total = sum(numbers)
 
-print(f'First set: {userSet1}\n Second set: {userSet2}')
-print(f'Common set: {common}')
+print(f'List of values:, {numbers}\n sum of values:, {total}')

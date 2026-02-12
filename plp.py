@@ -8,12 +8,13 @@ print(float(value1) + float(value2))
 
 #assignment week 2
 # Question 1
-userInput = []
+numbers = []
 
-user_input = int(input("How many values are you entering"))
+userInput = int(input("How many values are you entering "))
 
 for i in range(userInput):
-    numbers = int(input("Enter the value"))
+    value = int(input("Enter the value "))
+    numbers.append(value)
 
 total = sum(numbers)
 
