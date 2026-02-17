@@ -1,29 +1,24 @@
-# Create an empty list called my_list
-my_list = []
+# Ask the user to input two numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
 
-# Append the following elements to my_list: 10, 20, 30, 40
-my_list.append(10)
-my_list.append(20)
-my_list.append(30)
-my_list.append(40)
-print("After appending:", my_list)
+# Ask the user to choose an operation
+operation = input("Enter operation (+, -, *, /): ")
 
-# Insert the value 15 at the second position in the list
-my_list.insert(1, 15)
-print("After inserting 15:", my_list)
+# Perform the operation
+if operation == "+":
+    result = num1 + num2
+elif operation == "-":
+    result = num1 - num2
+elif operation == "*":
+    result = num1 * num2
+elif operation == "/":
+    if num2 != 0:
+        result = num1 / num2
+    else:
+        result = "Error! Division by zero is not allowed."
+else:
+    result = "Invalid operation!"
 
-# Extend my_list with another list: [50, 60, 70]
-my_list.extend([50, 60, 70])
-print("After extending:", my_list)
-
-# Remove the last element from my_list
-my_list.pop()
-print("After removing last element:", my_list)
-
-# Sort my_list in ascending order
-my_list.sort()
-print("After sorting:", my_list)
-
-# Find and print the index of the value 30 in my_list
-index_of_30 = my_list.index(30)
-print(f"The index of 30 is: {index_of_30}")
+# Display the result
+print(f"{num1} {operation} {num2} = {result}")
